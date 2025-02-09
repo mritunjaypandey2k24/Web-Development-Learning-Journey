@@ -1,0 +1,132 @@
+h3{
+    background-color: antiquewhite !important;
+}
+
+*{
+    font-family:"Courier New";
+}
+
+/*
+selectors importance/specificity is id>class>element selector
+*/
+
+h1, h3{
+    color:#B92B27;
+}
+
+#login{
+    background-color:white;
+}
+#signup{
+    background-color:#B92B27;
+    color:white;
+}
+
+.upvote{
+    background-color:green;
+    color:aliceblue;
+}
+
+/*#myId p{*/
+/*    color:green;*/
+/*} OR */
+
+div[id="myId"] p{
+    color:green;
+}
+
+/*desecendant selector: here anchor tag inside paragraph
+can be used for multi level descendant*/
+/*p a{*/
+/*    color:purple;*/
+/*    background-color: yellow;*/
+/*}*/
+
+.post a {
+    color:purple;
+    background-color: yellow;
+}
+
+nav  a{
+    color:hotpink;
+}
+
+/*Sibling Combinator : TO Apply to element immediately after something
+whose class or id or element tag we know*/
+p+h3{
+    text-decoration:underline;
+}
+.upvote+button{
+    background-color: cornflowerblue;
+    color:darkblue;
+
+}
+
+/*Child COmbinator: to establish child relation between 2 selector
+Only for direct descendant i.e only one level*/
+div>input{
+    background-color:darksalmon;
+}
+/*Attrivute selector*/
+input[type="text"]{
+    color:green;
+}
+input[type="password"]{
+    color:red;
+}
+
+input[type]{
+    background-color:ghostwhite;
+}
+/* Pseudo class: :hover, :active, :checked, :nth-of-type*/
+button:hover {
+    background-color: black;
+    color:white;
+}
+h3:hover{
+    text-decoration: overline;
+}
+button:active{
+    background-color:magenta;
+    color:black;
+}
+/*login and signup me nahi apply horaha
+ hai kyuki id se css apply hua ha vaha*/
+
+p:active{
+    font-weight:bold;
+    color:green;
+}
+
+input[type="radio"]:checked + label{
+    color:red;
+    font-weight: bold;
+}
+div:nth-of-type(1n){
+    background-color:blanchedalmond;
+}
+
+
+/* Pseudo element: first-letter, first-line, selection*/
+h1::first-letter{
+    color:green;
+}
+
+p::first-line{
+    color:red;
+}
+p::selection{
+background-color: yellowgreen;
+}
+
+h3{
+    background-color: yellow;
+}
+
+h3{
+    background-color: blue;
+}
+
+
+
+

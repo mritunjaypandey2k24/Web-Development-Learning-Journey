@@ -1,0 +1,27 @@
+#container{
+    height:300px;
+    width:80%;
+    margin:10px auto;
+    background-color: azure;
+    border: 2px solid black;
+    display: flex;
+    /*flex-direction: row;*/
+    /*flex-direction: row-reverse;*/
+    /*flex-direction: column;*/
+    flex-direction: column-reverse;
+}
+
+h1{
+    text-align:center;
+}
+
+#container div {
+    height:100px;
+    width: 100px;
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+
+
+
+}

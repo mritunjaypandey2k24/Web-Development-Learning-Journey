@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Include CSS in html</title>
+
+    <style>
+        h1{
+            color: red;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+<!----
+
+Inline Style
+-->
+<!--<h1 style="color:red">My College</h1>-->
+<!--<p style="color:blue">This is a paragraph</p>-->
+<!--<button style="color:cyan;background-color:black">Help</button>-->
+
+<!--
+if i create a new h1 then i have to copy the style from already
+present h1 so Problem is we cant implement in a large scale
+
+2nd method
+we can use style tag to make all h1 to same color
+Styyle tag
+--->
+<h1>Avengers Assemble!</h1>
+<h1>Avengers Assemble!</h1>
+<h1>Avengers Assemble!</h1>
+<h1>Avengers Assemble!</h1>
+
+<!---
+Problem: style adds style to single html file so in each
+html file writing style tag is not feasible
+
+
+3rd method: External Stylesheet
+Writing a css in a seperate document and linking it with html file
+abc.css
+style.css etc
+
+and link this to html file like textAlignProperty.html
+<head>
+<link rel="stylesheet" ref="style.css" or "path of style.css file">
+</head>
+-->
+
+</body>
+</html>

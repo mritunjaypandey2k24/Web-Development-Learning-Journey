@@ -1,0 +1,17 @@
+div{
+    height:200px;
+    width:200px;
+    background-color: greenyellow;
+    border:2px solid black;
+    margin:5px;
+    /*display:inline;  margin for top and bottom not work, height &
+    width dont work as no ht and wdth so no color only left and right margin work*/
+    display:inline-block;
+    /*inline-block me element pe styling block was apply hoga but unka behavior
+     inline element ki tarah matlab same line pe sare element  aajaenge without losing css property*/
+
+}
+
+#third{
+    display:none;
+}

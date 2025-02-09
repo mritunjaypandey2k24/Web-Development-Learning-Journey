@@ -1,0 +1,28 @@
+h1{
+    text-align:center;
+    text-decoration: wavy red underline;
+    letter-spacing:5px;
+    font-size: 50px;
+    font-family: avant garde, didot, sans-serif;
+
+}
+h3{
+    text-align: start;
+    text-decoration: pink line-through;
+    font-family: fantasy;
+}
+p{
+    text-align: justify;
+    font-weight: normal;
+    line-height: 1.5;
+    font-size:15px;
+
+}
+h2{
+    font-weight: normal;
+    text-decoration:double blue overline;
+    font-family: Impact;
+}
+a{
+    text-decoration: none;
+}

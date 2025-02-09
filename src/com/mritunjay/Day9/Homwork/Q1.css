@@ -1,0 +1,30 @@
+
+
+#container{
+    height:400px;
+    width: 400px;
+    background-color:azure;
+    display:flex;
+    border: 2px solid #60cfcf;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /*align-items: center;*/
+    align-content: space-around;
+
+
+
+
+}
+
+#container div{
+    height:100px;
+    width:100px;
+    font-size: 50px;
+    border: 2px solid black;
+    text-align: center;
+    border-radius: 10px;
+
+
+}
