@@ -1,273 +1,432 @@
-//Object Literals: used to store keyed collections & complex entities
-// object are collection of properties
-// properties => (key, value) pair
+// function
+// funtion funcName(){
+//   //do something
+// }
 
-// Creation of Object Literal
-
-// let student = { OR
-const student = {
-    name: "Mritunjay",
-    age: "24",
-    CPI: 8.23,
-    city: "Mumbai"
-
-};
-
-let student2 = ["Mritunjay",23,8.23];
-//therefore we use Object literals for complex data and not array
-//similar to array for const object literal the reference cannot be change but the
-//properties can be changed
-
-let delhi ={
-    latitude:"28.7041 N",
-    longitude: "77.1025 E"
-};
-
-const item = {
-    price: 100.99,
-    discount: 50,
-    colors : ["red","blue"]
-};
-
-
-//3.Creating a Post
-// Thread /Twitter Post
-// Create an object literal for the properties of thread/ twitter post which includes -
-// · username
-// · content
-// · likes
-// · reposts
-// · tags
-
-const post = {
-    username: "@mritunjaypandey",
-    content:"This is my #firstPost",
-    likes: 150,
-    repost: 5,
-    tags: ["@alpha","@beta","@gamma"]
+function hello(){
+    console.log("Hello");
 }
 
-//4. Get Values
+//funtion calling (using the funtion): funcName();
 
-let student3 = {
-    name:"Mritunjay",
-    CPI: "8.23"
-};
+hello();
 
-console.log(student3["name"]);
-console.log(post["content"]);
-console.log(post["tags"]);
+function printName(){
+    console.log("Mritunjay");
+    console.log("Hello there!");
+}
 
-console.log(student3.name);
-console.log(student3.CPI);
-console.log(post.content);
-console.log(post.tags);
-console.log(post.tags[0]);
-console.log(post.username);
+printName();
 
-//why use square bracket: when we have to use variables then we use square bracket wala option
-let prop = "repost";
-console.log(post[prop]);
-
-
-//5.Conversion in Get Values
-// JS automatically converts objects keys to strings when we use [] to get the value
-// Even if we made the number as a key, the number will be converted to string.
-
-const obj = {
-    1:"a",
-    2:"b",
-    true:"c",
-    null:"d",
-    undefined:"e"
-};
-//Js convert all above keys to string
-console.log(obj);
-console.log(obj[1]); //1 is not index and not number, JS convert it to first String and then access the key in the object
-console.log(obj[2]); // hum to 2 likh rahe hain but JS use string me convert karta hai then keys se match karke uski value dega
-console.log(obj[null]); //ye null nahi hai ise JS string me covert karta hai internally
-console.log(obj[undefined]);
-console.log(obj[true]);
-
-
-// console.log(obj.1);   . operator doesnt convert 1 to string
-console.log(obj.null);
-console.log(obj.true);
-console.log(obj.undefined);
-
-//we use names normally for key instead of reserved keywords like true,undefined, null
-
-
-//6.Add_Update Values of Object literals for already existing value
-
-const student4 = {
-    name: "Mritunjay",
-    age: "24",
-    CPI: 8.23,
-    city: "Mumbai"
-
-};
-//change city to delhi, add new property gender:male, change cpi to marks and 8.23 to A
-student4.city = "Delhi";
-
-console.log(student4.city);
-console.log(student4);
-
-// student.gender right now undefined
-student4.gender = "Male";
-console.log(student4.gender); //Male
-console.log(student4);
-
-student4.CPI = "A";
-console.log(student4);
-
-student4.CPI = [98,98,100];
-console.log(student4);
-
-//delete values
-// delete obj.keyName;
-delete student4.CPI;
-console.log(student4);
-
-console.log(delete student4.city);
-console.log(student4);
-
-//Nested Objects
-
-//object of objects
-// storing information of multiple students
-
-const classInfo = {
-    aman: {
-        grade: "A+",
-        city: "Mumbai"
-    },
-
-    kisan: {
-        grade: "A",
-        city:"Delhi"
-    },
-
-    ajay: {
-        grade:"O",
-        city: "Nagpur"
+function print1to5(){
+    for(let i=1; i<=5; i++){
+        console.log(i);
     }
-};
-console.log(classInfo.aman);
-console.log(classInfo.kisan);
-console.log(classInfo.ajay);
-
-console.log(classInfo.aman.city);
-console.log(classInfo.aman.grade);
-classInfo.aman.city = "Gurgaon";
-console.log(classInfo);
+}
+print1to5();
 
 
-//Array of Objects
-const classInfo1 = [
+function isAdult(){
+    let age = 18;
+    if(age>=18){
+        console.log("Adult");
+    }else{
+        console.log("Not an Adult");
+    }
+}
 
-    {
-        name:"aman",
-        grade:"A+",
-        city: "Mumbai"
-    },
-    {
-        name: "kisan",
-        grade:"A",
-        city:"Pune"
-    },
-    {
-        name:"karan",
-        grade:"O",
-        city: "Delhi"
+isAdult();
+
+//Practise Question
+
+function printPoem(){
+    console.log("Twinkle Twinkle little star");
+    console.log("How I wonder what you are?");
+}
+printPoem();
+
+
+//Create a Function to roll a dice & always display the value of the dice (1 to 6).
+
+function rolldice(){
+    let rand = Math.floor(Math.random()*6)+1
+    console.log(rand);
+}
+
+rolldice();
+rolldice();
+rolldice();
+rolldice();
+rolldice();
+rolldice();
+
+//Functions with Arguments
+//function funcName(arg1, arg2....){
+// do something
+// }
+
+function printInfo(name, age){
+    console.log(`${name}'s age is ${age}.`);
+}
+
+printInfo("Mritunjay",24);
+printInfo("Karan",20);
+printInfo("karan"); //karan's age is undefined.
+//in function's we have to write the starting argument but can skip the last arguments
+printInfo(23);//arguments are stored in order so even though I wrote a number
+//it was taken as name
+
+function sum(a,b){
+    console.log(a+b);
+}
+sum(1,2);
+sum(2,4);
+sum(3,8);
+
+//Practise Question
+
+// Create a function to give avg of 3 numbers
+
+function avgCalc(a,b,c){
+    let avg = (a+b+c)/3;
+    console.log(avg);
+}
+avgCalc(98,99,100);
+
+//Practise Question
+// Create a function that prints the multiplcn of number
+
+function printTable(n){
+    for(let i=1; i<=10; i++){
+        console.log(n*i);
+    }
+}
+printTable(10);
+
+
+//return keyWord
+
+//function funcName(arg1,arg2,....){
+// do something
+// return val;
+//}
+
+function sumNum(a,b){
+    return a+b;
+}
+let total = sumNum(10938,20484)
+console.log(total);
+console.log(sumNum(1,2));
+console.log(sumNum(1,sumNum(2,3)));
+
+//Practise Question
+//Create a function that return the sum of number from 1 to n
+
+function Sum1toN(n){
+    let sum = 0;
+    for(let i=1; i<=n; i++){
+        sum += i;
     }
 
+    return sum;
+}
 
-];
+console.log(Sum1toN(10));
+console.log(Sum1toN(1000));
 
-console.log(classInfo1)
-console.log(classInfo1[0]);
-console.log(classInfo1[1]);
-console.log(classInfo1[2]);
+//Scope
+// Scope determines the accesibility of variables objexts and functions from different parts
+// function, block, lexical
 
-console.log(classInfo1[0].name);
-console.log(classInfo1[0].grade);
-console.log(classInfo1[0].city);
-classInfo1[0].city ="gurgaon";
-console.log(classInfo1[0].city);
-
-classInfo1[0].gender = "Male";
-console.log(classInfo1[0]);
-
-//9. Math Object
-//Math.PI, Math.E(exponenetial (e)
-//Math.cos, Math.abs, Math.pow(a,b)->a^b
-//Math.floor(n), Math.ceil(n)
-//Math.random()
-
-console.log(Math.PI);
-console.log(Math.E);
-console.log(Math.abs(-356));
-console.log(Math.pow(2,3));
-console.log(Math.floor(3.23));
-console.log(Math.floor(-3.23));
-console.log(Math.ceil(3.21));
-console.log(Math.ceil(-3.21));
-console.log(Math.random());
-console.log(Math.random()*10);
-
-//Random Integer
-//from 1 to 10
-let step1 = Math.random();
-let step2 = step1*10;
-let step3 = Math.floor(step2);
-let step4 = step3+1; // range changes from 0-9 to 1-10
-console.log(step4);
+//Function scope: variable defined inside a function are not visible or accesible outside the function
+let sum1 = 45; //Global Scope
+function CalSum(a,b){
+    let sum1 = a+b; //Function Scope: it is more specific
+    return sum1;
+}
+console.log(sum1);
 
 
-//11 practise
-// Generate a random number between 1 to 100
-console.log(Math.floor(Math.random()*100)+1);
+//Block Scope
+// block -> {  }
+//Variable declared inside a {} block cannot be accesed from outside the block
 
-//Generate a random, number between 1 to 5
-console.log((Math.floor(Math.random()*5)+1));
-console.log((Math.floor(Math.random()*10)+1)%5+1);
+{
+    let a = 34;
+    const b = 35;
+    var c = 24;
+}
+// console.log(a); // a is not defined error
+// console.log(b); // b is not defined error
+console.log(c); //works but using var is not good idea
+//block was used in for loop and for if condition
 
-//Generate a random number between 21 to 25
-console.log(Math.floor(Math.random()*5)+21);
+let age=24;
 
+if(age >=18){
+    let str = "adult";
+}
+// console.log(string);  //string is not defined error
+
+
+//Lexical Scope
+// a variable defined outside a function can be accessible inside another function defined
+// after the variable declaration.
+// The opposite is NOT true.
+
+//i.e nested functions
+
+function outerFunc(){
+
+    function innerFunc(){//Hoisting concept: variable used before defining
+        console.log(x);
+        let a =20;
+    }
+
+    let x=5;
+    let y=6;
+
+    // function innerFunc(){
+    //     console.log(x);
+    // }
+
+    innerFunc();
+
+    // console.log(a); //doesn't work
+}
+
+outerFunc(); // 5;
+// innerFunc();//innerFunc() not defined as its scope is function scope and can be used inside outer function only
+
+//Practise Question;
+
+let greet = "hello"; //global scope
+
+function changegreet(){
+    let greet = "namaste";//function scope
+    console.log(greet);
+    function innerGreet(){
+        console.log(greet); //lexical scope
+    }
+
+}
+console.log(greet);
+changegreet();
+
+
+
+
+
+//Function Expressions
+
+//const variablename = function(arg1,arg2,...){
+// //do something
+// }
+
+let name = "mritunjay";
+
+let sum3 = function(a,b){
+    return a+b;
+}
+console.log(sum3);
+
+console.log(sum3(2,3));
+
+let helloworld = function(){
+    console.log("Hello World");
+}
+
+helloworld();
+
+helloworld = function(){
+    console.log("Namaste!");
+}
+console.log(helloworld());
+
+
+
+//Higher Order Function
+// A function that does one or both
+//1) takes one or multiple functions as argument
+//2) returns a function
+
+///takes one or multiple functions as argument
+
+function multipleGreet(func, n){ //Higher Order function
+    for(let i=1; i<=n; i++){
+        func();
+    }
+}
+
+greet = function(){
+    console.log("Hello");
+}
+
+multipleGreet(greet,20);
+multipleGreet(function(){console.log("Namaste")},1000);
+
+//returns a function
+
+function oddEvenTest(request){
+    if(request=="odd"){
+        let odd =  function(n){
+            console.log(!(n%2 == 0));
+        }
+
+        return odd;
+    }
+    else if(request == "even"){
+        let even = function(n){
+            console.log(n%2==0);
+        }
+        return even;
+    }
+    else{
+        console.log("Wrong Request");
+    }
+}
+let request = "odd";
+let func = oddEvenTest(request);
+func(10);
+
+request="even";
+func = oddEvenTest(request);
+func(10);
+
+
+//Methods
+
+//actions that can be performed on an object
+
+//meaning jaise hum key value pair banate hai object keliye
+//similarly jab hum functions banaye un objects ke liye to wo functions ko method kehte hai
+
+const calculator={
+
+    num : 55, //this is property(key-value pair)
+
+    add: function(a,b){
+        return a+b;
+    },
+
+    sub: function(a,b){
+        return a-b;
+    },
+
+    div: function(a,b){
+        return a/b;
+    }
+}
+console.log(calculator);
+console.log(calculator.num);
+console.log(calculator.add(1,2));
+console.log(calculator.sub(1,2));
+console.log(calculator.div(1,2));
+//Math.PI  here Math is an object and PI is key and it value: 3.1415...
+// similarly Math.random() random is the key and its function is the value
+//in string and arrays we used many methods
+//JS's arrays and string are internally objects
+// thats why typeof array is object
+// and we use .push() and .pop()
+
+//Method shorthand
+
+const calcu = {
+    add(a,b){//no need use keyword function here
+        return a+b;
+    },
+    sub(a,b){
+        return a-b;
+    }
+}
+console.log(calcu.add(1,2));
+console.log(calcu.sub(1,2));
 
 
 //HomeWork
-//Create a program that generates a random number representing a dice roll.
-// [The number should be between 1 and 6].
-console.log(Math.floor(Math.random()*6)+1);
+//Qs1. Write a JavaScript function that returns array elements larger than a number.
+let number =[1,2,3,5,6,4,78,9];
 
-
-//Create an object representing a car that stores the following properties for the
-// car: name, model, color.
-// Print the car’s name.
-console.log("HomeWork")
-let car = {
-    name:"Maruti",
-    model: "maruti-800",
-    color: "maroon"
+function maxfinder(a,num){
+    let max=[];
+    for(let i=0; i<a.length; i++){
+        if(a[i]>num){
+            max.push(a[i]);
+        }
+    }
+    return max;
 }
-console.log(car.name);
 
-//3. Create an object Person with their name, age and city.
-// Edit their city’s original value to change it to “New York”.
-// Add a new property country and set it to the United States.
+let ans = maxfinder(number,5);
+console.log(ans);
 
-Person = {
-    name: "Peter Parker",
-    age:24,
-    city: "WashingtonDC"
+//Write a JavaScript function to extract unique characters from a string.
+// Example: str = “abcdabcdefgggh” ans = “abcdefgh”
+
+function duplicateRemover(a){
+    let ans = "";
+    for(let i=0; i<a.length; i++){
+        let ch = a[i];
+        if(ans.indexOf(ch)==-1){
+            ans += ch;
+        }
+    }
+
+    return ans;
 }
-Person.city = "NewYork";
-Person.country = "United States";
-console.log(Person);
+let str = "abcdabcdefgggh"
 
+ans = duplicateRemover(str);
+console.log(ans);
+
+//Qs3. Write a JavaScript function that accepts a list of country names as input and
+// returns the longest country name as output.
+// Example : country = ["Australia", "Germany", "United States of America"] output :
+//
+// "United States of America"
+
+let country = ["Australia", "Germany", "United States of America"]
+
+function longestName(a){
+    let max = 0;
+    for(let i=0; i<a.length; i++){
+        if(a[i].length > a[max].length){
+            max = i;
+        }
+    }
+
+    return a[max];
+}
+console.log(longestName(country));
+
+//Qs4. Write a JavaScript function to count the number of vowels in a String
+// argument.
+
+function vowelCount(a){
+    let count=0;
+    for(let i=0; i<a.length; i++){
+
+        if(a[i]=='a'||a[i]=='e'||a[i]=='i'||a[i]=='o'||a[i]=='u'){
+            count++;
+        }
+
+    }
+    return count;
+}
+
+console.log(vowelCount("Hello How are you"));
+
+
+//Write a JavaScript function to generate a random number within a range
+// (start, end).
+
+function randomNumber(a,b){
+    let rand = Math.floor(Math.random()*(b-a))+a;
+    return rand;
+}
+
+// console.log(randomNumber(1,6));
+console.log(randomNumber(20,25));
 
 
 
