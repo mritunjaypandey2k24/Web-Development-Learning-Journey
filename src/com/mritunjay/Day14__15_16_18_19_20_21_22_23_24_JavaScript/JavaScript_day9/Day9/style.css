@@ -1,0 +1,21 @@
+.red{
+    color:red;
+}
+.blue{
+    color:blue;
+}
+
+.box{
+    border: 1px solid black;
+    background: magenta;
+}
+
+.btn-style{
+    background-color: blue;
+    color: white;
+}
+
+.h1-style{
+    text-decoration: underline;
+    color: purple;
+}
