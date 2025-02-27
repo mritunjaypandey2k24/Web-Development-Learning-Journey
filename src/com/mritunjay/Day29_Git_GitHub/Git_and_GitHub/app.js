@@ -26,7 +26,7 @@
 // git clone <- some link ->
 // git status
 
-//9  Basic Commands
+//9,10, Basic Commands
 // • add - adds new or changed files in your working directory to the Git staging area.
 // git add <- file name ->
 
@@ -35,3 +35,5 @@
 
 // • push - upload local repo content to remote repo
 // git push origin main
+
+
