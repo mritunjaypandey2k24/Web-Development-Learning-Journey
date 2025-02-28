@@ -28,7 +28,7 @@
 
 //9,10, Basic Commands
 // • add - adds new or changed files in your working directory to the Git staging area.
-// git add <- file name ->
+// git add <- file name -> or git add .
 
 // • commit - it is the record of change
 // git commit -m "some message"
@@ -43,14 +43,14 @@
 //we can use ls -la to check hidden files like .git is present or not
 //Basic Commands
 // • init - used to create a new git repo
-// git remote add origin link ->
+// git remote add origin <- link ->
 // git remote -v (to verify remote)
 // git init
-// git branch
-// (to check branch)
+// git branch      (to check branch)
+
 // git branch -M main (to rename branch)
 // git push origin main  // or we can use
-// git push -u origin main  //  -u means set karna ki jab hum origin ki baat karre hai to konse origin and main ki baat karre hai
+// git push -u origin main  //  -u means upstream ko set karna ki jab hum origin ki baat karre hai to konse origin and main ki baat karre hai
 // uppar wali line 53 ek baar likhne ke baad hum uske baad sirf "git push" use kar sakte hai
 // baar bar origin main likhna jaruri nahi hai
 
@@ -91,7 +91,7 @@
 // It lets you tell others about changes you've pushed to a branch in a repository on GitHub.
 //PR merge is in itself a commit
 
-//Pull command // Github page me merge karne ke baad locally wo changes yaani merge dekhne ke liye use hota hai
+//17: Pull command // Github page me merge karne ke baad locally wo changes yaani merge dekhne ke liye use hota hai
 //Basic Commands
 
 // git pull origin main
@@ -99,3 +99,33 @@
 // used to fetch and download content from a remote repo and immediately update the local repo
 // to match that content.
 //so push is from local to Github and pull is for from git hub to local
+
+
+//18. Merge Conflicts
+// An event that takes place when Git is unable to automatically resolve differences in code
+// between two commits.
+
+//19. Fixing Mistakes
+
+// Case 1 : staged changes // koi mistake maine git add . kiya ho but commit na hua ho and muje use hatana hai then
+// git reset <- file name ->   //agar sirf ek file me mistake karke add kiya hoto
+// git reset                    //agar bohot saare file me mistake karne ke baad add . kiya hoto then is wale linke ko use karna
+
+
+// Case 2 : commited changes (for one commit)  //agar koi mistake ko maine add and commit dono kardiya ho then ise use karna
+// git reset HEAD~1                             //yaha HEAD ek pointer hai jo last commit ko point karta hai. ~1 means mera head pointer abb ek commit piche point karega i.e last commit remove hoagaya
+
+// Case 3 : commited changes (for many commits) //muje bohot sare commits ko undo karna hoga then
+
+// git reset <- commit hash ->          //git log  use karne par we et to see all the commit frm 1st commit jis commit pe jaana hai usk hashcode copy kara "q" for quit then  git reset <hashcode copy>
+// git reset --hard <- commit hash ->       //uppar wale reset karne par jo we get to the commit but data curr wala unstaged dikhta hai
+//                                              to remove that  data we do --hard i.e forcefully remove any data present after the commit we want  is removed
+
+
+
+//20 cc
+// What is Forking?
+// A fork is a new repository that shares code and visibility settings with the original "upstream"
+// repository.
+// Fork is a rough copy.
+
