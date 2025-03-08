@@ -1,18 +1,5 @@
-<!doctype html>
+<%- include("includes/head.ejs") %>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Instagram</title>
-    <style>
-        img{
-            height:100px;
-            width:100px;
-        }
-    </style>
-</head>
 <body>
 <h2>This Page belongs to @<%= data.name %> </h2>
 <button>Follow</button>
@@ -31,6 +18,8 @@
     </p>
 
 <%}%>
+
+<%- include("includes/footer.ejs")%>
 </body>
 </html>
 

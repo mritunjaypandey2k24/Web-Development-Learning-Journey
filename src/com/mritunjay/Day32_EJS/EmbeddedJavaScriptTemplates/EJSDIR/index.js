@@ -90,6 +90,10 @@ app.get("/ig/:username",(req,res)=>{
 
 });
 
+//10 includes -> way to create sub templates inside an ejs template
+
+
+
 
 
 app.listen(port,()=>{
