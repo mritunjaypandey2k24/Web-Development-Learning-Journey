@@ -94,7 +94,19 @@ app.get("/posts/:id/edit",(req,res)=>{
 })
 
 
+//delete route
 
+app.delete("/posts/:id",(req,res)=>{
+    let {id}  = req.params;
+    // let post = posts.find((p)=>id===p.id);
+    posts = posts.filter((p)=>id !== p.id);  //add all the posts in posts that dont have the same id i.e removing post with that id
+    // res.send("delete Success");
+    res.redirect("/posts");
+
+
+
+
+});
 
 app.listen(port, ()=>{
     console.log("Listening to port: 8080");

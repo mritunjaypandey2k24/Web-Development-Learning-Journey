@@ -98,4 +98,23 @@ Serve the edit form     GET     /posts/:id/edit
 
 
 here after all changes we can edit the post but in html there are only get and post methods
+
 so we use method-override package ans use query over ride
+
+//11. Destroy Route
+
+Implement     /posts/:id
+
+Destroy Route
+
+DELETE      /posts/:id       to delete specific post
+
+
+
+
+
+
+
+
+
+
