@@ -139,10 +139,49 @@ Foreign key in our table is a column which is a primary key in another table
 
 ER Diagram ![img_16.png](img_16.png)
 
+//13. Primary and Foreign Key
+
+What are Keys?
+Keys are special columns in the table
+
+Primary Key
+It is a column (or set of columns) in a table that uniquely identifies each row. (a unique id)
+There is only 1 PK & it should be NOT null.
+
+Foreign Key
+A foreign key is a column (or set of columns) in a table that refers to the primary key in another table.
+
+FKs can have duplicate & null values.
+There can be multiple FKs.
+
+![img_17.png](img_17.png)
+
+![img_18.png](img_18.png)
+
+//14. INSERT INTO table
+
+Table Queries
+
+Insert into Table
+
+INSERT INTO table_name
+(colnamel, colname2);
+
+VALUES
+(col1_v1, col2_v2),
+(col1_v1, col2_v2);
 
 
+//15. SELECT command
+
+Selects & Show data from the DB
+
+Syntax :   SELECT col1, col2 FROM table_name;
 
 
+Syntax (to show all): 
+
+SELECT * FROM table_name;
 
 
 
