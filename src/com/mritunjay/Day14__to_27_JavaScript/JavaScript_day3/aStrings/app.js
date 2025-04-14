@@ -2,7 +2,7 @@
 //
 // to remove space from start and
 // end of string i.e it make a new string with no
-// spaces at start and end as strings are immutable
+// // spaces at start and end as strings are immutable
 // let msg= "      He  llo       ";
 // console.log(msg);
 // console.log(msg.trim());
@@ -37,13 +37,13 @@
 
 //Method Chaining
 
-// let msg = "       hello";
-// console.log(msg);
-//
-// // let newMsg = msg.trim();
-// // console.log("after trim: ",newMsg);
-// // newMsg = newMsg.toUpperCase();
-// // console.log( "after Uppercase: ",newMsg);
+let msg = "       hello";
+console.log(msg);
+
+// let newMsg = msg.trim();
+// console.log("after trim: ",newMsg);
+// newMsg = newMsg.toUpperCase();
+// console.log( "after Uppercase: ",newMsg);
 //
 // //OR
 // let newMsg = msg.trim().toUpperCase();
@@ -56,7 +56,7 @@
 // console.log(str.slice(1,5));   //Love: si=1 and ei=5(non-inclusive)
 // console.log(str.slice(1));  //from si=1 to end of the string
 // console.log(str.slice(1, str.length));
-//
+// //
 // console.log(str.slice(-1)); // 11-1= 10 so prints index 10 till end i.e 'g'
 // console.log(str.slice(-2)); // 'ng'
 // console.log(str.slice(-3));  // 'ing'

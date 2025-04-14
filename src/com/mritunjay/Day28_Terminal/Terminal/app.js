@@ -65,7 +65,7 @@
 // ls -a
 // ls -la
 
-//Touch Command - to change file access and modification time but if any file does not exist the it is created with default permission
+//Touch Command - to change file access and modification time but if any file does not exist then it is created with default permission
 // so basically -
 // Used to create files
 

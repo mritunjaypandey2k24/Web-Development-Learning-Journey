@@ -248,11 +248,16 @@ console.log(fact);
 arr=[10,20,30,40,60,180];
 let max=0;
 for(let i=0; i<arr.length; i++){
-    max = Math.max(arr[i],max);
+    // max = Math.max(arr[i],max);
+    if(arr[i]>max){
+        max=arr[i];
+    }
 }
 console.log(max);
 
 
+
+console.log(Math.floor(100/3));
 
 
 
